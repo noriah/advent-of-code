@@ -43,6 +43,10 @@ func FetchInput(year, day int) []byte {
 	CheckError(err)
 	defer resp.Body.Close()
 
+	if resp.StatusCode == 404 {
+		panic(fmt.Sprintf("Input not ready! (%d day %02d)", year, day))
+	}
+
 	body, err := ioutil.ReadAll(resp.Body)
 	CheckError(err)
 
