@@ -8,8 +8,8 @@ type Window struct {
 	Capacity int
 }
 
-// Add a value to the window, shifting if needed.
-func (w *Window) Push(value int) {
+// Add a value to the window, shifting if needed. Returns new sum.
+func (w *Window) Push(value int) int {
 	if w.length < w.Capacity {
 		w.length++
 		w.sum += value
@@ -23,6 +23,8 @@ func (w *Window) Push(value int) {
 	if w.index++; w.index >= w.Capacity {
 		w.index = 0
 	}
+
+	return w.sum
 }
 
 // Returns sum of window values.

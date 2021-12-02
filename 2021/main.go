@@ -27,7 +27,7 @@ func main() {
 		panic("day out of range")
 	}
 
-	data := bytes.Trim(common.GetInput(day), "\n ")
+	data := bytes.Trim(common.GetInput(2021, day), "\n ")
 
 	fmt.Printf("Day %d\n", day)
 

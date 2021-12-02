@@ -22,10 +22,10 @@ func readCookie() string {
 	return strings.Trim(string(data), "\n ")
 }
 
-const url = "https://adventofcode.com/2021/day/%d/input"
+const url = "https://adventofcode.com/%d/day/%d/input"
 
-func GetInput(day int) []byte {
-	req, err := http.NewRequest("GET", fmt.Sprintf(url, day), nil)
+func GetInput(year, day int) []byte {
+	req, err := http.NewRequest("GET", fmt.Sprintf(url, year, day), nil)
 	CheckError(err)
 
 	sessionCookie := readCookie()

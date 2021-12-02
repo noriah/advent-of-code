@@ -1,8 +1,6 @@
 package day01
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func NewRunner() func(data []byte) {
 	return func(data []byte) {
