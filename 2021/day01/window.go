@@ -10,6 +10,7 @@ type Window struct {
 
 // Add a value to the window, shifting if needed. Returns new sum.
 func (w *Window) Push(value int) int {
+
 	if w.length < w.Capacity {
 		w.length++
 		w.sum += value

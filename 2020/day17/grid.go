@@ -223,10 +223,7 @@ func (g *Grid) Cycle() {
 
 					if numActive == 3 {
 						p.nextState = true
-						continue
 					}
-
-					// p.nextState = false
 				}
 			}
 		}
@@ -262,8 +259,10 @@ func (g *Grid) PrintGrids(x, sizeX, y, sizeY, z, sizeZ, w, sizeW int) {
 						fmt.Print(".")
 					}
 				}
+
 				fmt.Println()
 			}
+
 			fmt.Println()
 		}
 	}
