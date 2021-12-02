@@ -1,8 +1,10 @@
-package day01
+package day02
 
-import (
-	"fmt"
-)
+import "fmt"
+
+const forward = 'f'
+const up = 'u'
+const down = 'd'
 
 func NewRunner() func(data []byte) {
 	return func(data []byte) {

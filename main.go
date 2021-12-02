@@ -7,12 +7,14 @@ import (
 
 	"github.com/noriah/aoc2021/common"
 	"github.com/noriah/aoc2021/day01"
+	"github.com/noriah/aoc2021/day02"
 )
 
 var daySolutions = make([]common.DayRunner, 0, 25)
 
 func init() {
 	daySolutions = append(daySolutions, day01.NewRunner())
+	daySolutions = append(daySolutions, day02.NewRunner())
 }
 
 func main() {

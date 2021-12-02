@@ -6,7 +6,7 @@ import (
 	"github.com/noriah/aoc2021/common"
 )
 
-func Problem1(data []byte) int {
+func Part1(data []byte) int {
 	splits := bytes.Split(data, []byte("\n"))
 	prev := common.ParseIntBytes(splits[0])
 	increases := 0

@@ -6,7 +6,7 @@ import (
 	"github.com/noriah/aoc2021/common"
 )
 
-func Problem2(data []byte) int {
+func Part2(data []byte) int {
 	window1 := &Window{
 		Data:     make([]int, 3),
 		Capacity: 3,
