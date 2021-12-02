@@ -11,15 +11,16 @@ func Part2(data []byte) int {
 
 	for _, s := range splits {
 		parts := bytes.Split(s, []byte(" "))
+		value := int(parts[1][0] - '0')
+
 		switch parts[0][0] {
 		case forward:
-			v := int(parts[1][0] - '0')
-			posY += v
-			posZ += v * aim
+			posY += value
+			posZ += value * aim
 		case up:
-			aim -= int(parts[1][0] - '0')
+			aim -= value
 		case down:
-			aim += int(parts[1][0] - '0')
+			aim += value
 		default:
 			panic(string(s))
 		}
