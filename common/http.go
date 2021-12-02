@@ -24,7 +24,7 @@ func readCookie() string {
 
 const url = "https://adventofcode.com/%d/day/%d/input"
 
-func GetInput(year, day int) []byte {
+func FetchInput(year, day int) []byte {
 	req, err := http.NewRequest("GET", fmt.Sprintf(url, year, day), nil)
 	CheckError(err)
 
