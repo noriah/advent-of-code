@@ -246,7 +246,9 @@ func (g *Grid) Cycle() {
 }
 
 func (g *Grid) PrintGrids(x, sizeX, y, sizeY, z, sizeZ, w, sizeW int) {
+
 	for iW, maxW := w, w+sizeW; iW < maxW; iW++ {
+
 		for iZ, maxZ := z, z+sizeZ; iZ < maxZ; iZ++ {
 			fmt.Printf("z=%d, w=%d\n", iZ, iW)
 
