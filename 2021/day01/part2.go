@@ -3,7 +3,7 @@ package day01
 import (
 	"bytes"
 
-	"github.com/noriah/aoc2021/common"
+	"github.com/noriah/advent-of-code/common"
 )
 
 func Part2(data []byte) int {

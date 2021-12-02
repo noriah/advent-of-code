@@ -1,3 +1,3 @@
-module github.com/noriah/aoc2021
+module github.com/noriah/advent-of-code
 
 go 1.17

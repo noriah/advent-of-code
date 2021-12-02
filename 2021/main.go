@@ -5,9 +5,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/noriah/aoc2021/common"
-	"github.com/noriah/aoc2021/day01"
-	"github.com/noriah/aoc2021/day02"
+	"github.com/noriah/advent-of-code/common"
+
+	"github.com/noriah/advent-of-code/2021/day01"
+	"github.com/noriah/advent-of-code/2021/day02"
 )
 
 var daySolutions = make([]common.DayRunner, 0, 25)
