@@ -176,7 +176,7 @@ func (g *Grid) Init(data []byte, cycles int, hasW bool) {
 	for y, s := range splits {
 
 		for x, v := range s {
-			g.cubes[g.startW][g.startZ][g.startY+y][g.startX+x].state = v == byte('#')
+			g.cubes[g.startW][g.startZ][g.startY+y][g.startX+x].state = v == '#'
 		}
 	}
 
