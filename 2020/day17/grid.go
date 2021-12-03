@@ -123,15 +123,15 @@ func (g *Grid) Init(data []byte, cycles int, hasW bool) {
 		}
 	}
 
+	wMax := 0
+	wStart := 0
+
+	if hasW {
+		wMax = 1
+		wStart = -1
+	}
+
 	for _, p := range g.points {
-
-		wMax := 0
-		wStart := 0
-
-		if hasW {
-			wMax = 1
-			wStart = -1
-		}
 
 		for w := wStart; w <= wMax; w++ {
 			aW := w + p.w
