@@ -51,19 +51,6 @@ type Point struct {
 // 	return id
 // }
 
-func (g *Grid) GetNumActive() int {
-	active := 0
-
-	for _, p := range g.points {
-
-		if p.state {
-			active++
-		}
-	}
-
-	return active
-}
-
 func (g *Grid) Init(data []byte, cycles int, hasW bool) {
 	splits := bytes.Split(data, []byte("\n"))
 	initialX := len(splits[0])
@@ -240,6 +227,19 @@ func (g *Grid) Cycle() {
 	g.sizeX += 2
 	g.startY--
 	g.sizeY += 2
+}
+
+func (g *Grid) GetNumActive() int {
+	active := 0
+
+	for _, p := range g.points {
+
+		if p.state {
+			active++
+		}
+	}
+
+	return active
 }
 
 func (g *Grid) PrintGrids(x, sizeX, y, sizeY, z, sizeZ, w, sizeW int) {
